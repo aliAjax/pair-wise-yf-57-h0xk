@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "taro build --type h5 --watch",
     "build": "taro build --type h5",
-    "start": "taro build --type h5 --watch"
+    "start": "taro build --type h5 --watch",
+    "test": "esbuild scripts/test-logic.ts --bundle --platform=node --format=esm --outfile=node_modules/.tmp/test-logic.mjs --log-level=warning && node node_modules/.tmp/test-logic.mjs"
   },
   "dependencies": {
     "@nutui/nutui-react-taro": "^3.0.17",
